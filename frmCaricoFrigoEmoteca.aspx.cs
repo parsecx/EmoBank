@@ -90,7 +90,7 @@ public partial class frmCaricoFrigoEmoteca : System.Web.UI.Page
     {
         int[] a = new int[1];
         a[0] = 0;
-        ImportExport.ExportToPDF(grdData, "Carico Frigo Emoteca", "", a, "A4", true);
+        ImportExport.ExportToPDF(grdData, "Carico Frigo Emoteca : Tutti", "", a, "A4", true);
     }
     protected void btnNuovo_Click(object sender, EventArgs e)
     {
@@ -267,7 +267,8 @@ public partial class frmCaricoFrigoEmoteca : System.Web.UI.Page
             {
                 ddlDenominazioneB.SelectedValue = ddlclincaden;
             }
-
+            //Something wrong with string here
+            //TODO: Fix issue later
             var ProgressiveAnimal = Convert.ToInt32(dt.Rows[0]["ProgressiveAnimalDonator"].ToString());
             var ProtocolNumberValue = Convert.ToInt32(dt.Rows[0]["ProtocolNumber"].ToString());
 

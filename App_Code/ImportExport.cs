@@ -126,7 +126,7 @@ public class ImportExport : IPdfPageEvent
         // College Name Header
         strHeder.Append("<div><table style='text-align: center; line-height:12px;' cellpadding='0' cellspacing='0'><tr ><td style='vertical-align: top;'><img src='"
             + HttpContext.Current.Server.MapPath("~\\images\\logo.png")
-            + "' width='150px'; height ='50px'/></td><td colspan='7' style='font-size: 13px;  font-weight: bold; text-align: center; vertical-align: top;'> <br />"
+            + "' width='150px'; height ='90px'/></td><td colspan='7' style='font-size: 13px;  font-weight: bold; text-align: center; vertical-align: top;'> <br />"
            + "</td></tr></table>");
         // Filter And Table header
         strFilter.Append("<table style='text-align: center; line-height:12px;' cellpadding='1' cellspacing='0'><tr bgcolor='#eeeeee'><td style='font-size: 10px;  text-align:left; vertical-align: top; font-weight:bold' >" + Title + "</td><td style='font-size: 8px;  text-align:right; vertical-align: top; font-weight:bold' >Print Data: " + System.DateTime.Now.ToString("dd/MM/yyyy") + "</td></tr><tr><td style='font-size: 10px;font-weight: bold;  text-align:left; vertical-align: top;' colspan='2' bgcolor='#eeeeee'>" + Filter + " </td></tr></table>");
