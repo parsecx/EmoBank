@@ -1,0 +1,103 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Security.Cryptography;
+using System.IO;
+using System.Text;
+using System.Collections;
+using DAL;
+using System.Data;
+using System.Data.SqlClient;
+
+public partial class MasterPage : System.Web.UI.MasterPage
+{
+    SqlHelper cls = new SqlHelper();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(Convert.ToString(Session["UserId"])))
+        {
+        }
+        else
+        {
+            SqlParameter[] opara ={
+                                      new SqlParameter("@CodID",SqlDbType.VarChar)
+                                   
+                                 };
+            opara[0].Value = Session["UserId"].ToString();
+            DataTable dtEmpDetails = cls.ExecuteDataTable("Sp_GetEmobank_UsersMenu", opara, CommandType.StoredProcedure);
+            if (dtEmpDetails.Rows.Count > 0)
+            {
+                Session["GestioneUtentieAccessi"] = dtEmpDetails.Rows[0]["GestioneUtentieAccessi"].ToString();
+                Session["BancaSangue/Emoderivati"] = dtEmpDetails.Rows[0]["BancaSangue/Emoderivati"].ToString();
+                Session["AmbulatoriPuntiPrelievo"] = dtEmpDetails.Rows[0]["AmbulatoriPuntiPrelievo"].ToString();
+                Session["MovimentiPrelievi"] = dtEmpDetails.Rows[0]["MovimentiPrelievi"].ToString();
+                Session["AnalisiStatistichePrelievi"] = dtEmpDetails.Rows[0]["AnalisiStatistichePrelievi"].ToString();
+                Session["AnagraficaCliniche"] = dtEmpDetails.Rows[0]["AnagraficaCliniche"].ToString();
+                Session["MovimentoRichiesteCliniche"] = dtEmpDetails.Rows[0]["MovimentoRichiesteCliniche"].ToString();
+                Session["AnalisiConsegneCliniche"] = dtEmpDetails.Rows[0]["AnalisiConsegneCliniche"].ToString();
+
+
+            }
+            
+        }
+    }
+   
+  
+
+
+    public void ClearApplicationCache()
+    {
+        List<string> keys = new List<string>();
+
+        // retrieve application Cache enumerator
+        IDictionaryEnumerator enumerator = Cache.GetEnumerator();
+
+        // copy all keys that currently exist in Cache
+        while (enumerator.MoveNext())
+        {
+            keys.Add(enumerator.Key.ToString());
+        }
+
+        // delete every key from cache
+        for (int i = 0; i < keys.Count; i++)
+        {
+            Cache.Remove(keys[i]);
+        }
+    }
+
+
+    protected void lnkLogOut_Click(object sender, EventArgs e)
+    {
+        HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
+        HttpContext.Current.Response.AddHeader("Expires", "0");
+
+        Session.Clear();
+        Session.Abandon();
+        Session.RemoveAll();
+
+        if (Request.Cookies["ASP.NET_SessionId"] != null)
+        {
+            Response.Cookies["ASP.NET_SessionId"].Value = string.Empty;
+            Response.Cookies["ASP.NET_SessionId"].Expires = DateTime.Now.AddMonths(-20);
+        }
+
+        if (Request.Cookies["AuthToken"] != null)
+        {
+            Response.Cookies["AuthToken"].Value = string.Empty;
+            Response.Cookies["AuthToken"].Expires = DateTime.Now.AddMonths(-20);
+        }
+        Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
+        Response.Cache.SetCacheability(HttpCacheability.NoCache);
+        Response.Cache.SetNoStore();
+        ClearApplicationCache();
+        Context.RewritePath("~/Login.aspx");
+        Response.Redirect("~/Login.aspx");
+
+    }
+    
+}

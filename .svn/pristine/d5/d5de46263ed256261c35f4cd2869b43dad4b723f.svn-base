@@ -1,0 +1,507 @@
+.navbar-default .navbar-toggle .icon-bar{
+    background: #fff;
+}
+.navbar-default .navbar-toggle {
+    background: #f69165;
+    border: 1px solid #f69165 !important;
+    border-radius: 0px;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background: #ee6529;
+    border: 1px solid #ee6529 !important;
+
+}
+@media (min-width:1960px){
+    .hr, .services-tab-content-wrap, #home-appointment{
+        background-size:contain;
+        background-position:center;
+    }
+    .testimonial-wrap{
+        background-repeat:no-repeat;
+        background-size:100%;
+        background-position:center;
+    }
+    #home-slider .item img{
+        width:100%;
+        max-width: none;
+        height: auto;
+    }
+}
+@media (max-width:1375px){
+    .button-banner-wrap{
+        margin-top: 0;
+    }
+    .button-banner-wrap .container{
+        padding: 0;
+        width: 100%;
+        max-width: none;
+    }
+    .slider-desc .content{
+        margin-top: 7%;
+    }
+}
+@media (max-width:1170px){
+    .main-nav-wrap .navbar-default .navbar-nav>li{
+        margin-right: 10px;
+    }
+    .news-content-wrap:hover .news-content, .news:hover .news-content{
+        display: none;
+    }
+    .news:hover .news-content-fix{
+        opacity: 10;
+    }
+    #testimonial-desc .slick-dots{
+        margin-left: 0;
+        margin-top: 15px;
+        margin-bottom: 45px;
+        text-align: center;
+    }
+    #testimonial-desc .slick-dots li{
+        float: none;
+        display: inline-block;
+    }
+}
+@media (max-width:1160px){
+    
+}
+@media (max-width:1040px){
+    .small-title-slider{
+        display: none;
+    }
+    
+}
+
+@media (max-width:992px){
+    .logo-wrap{
+        text-align: center;
+    }
+    .logo{
+        display: inline-block;
+    }
+    .news{
+        width: 50%;
+        float: left;
+        margin-bottom: 30px;
+    }
+    #testimonial-images.slick-slider{
+        text-align: center;
+    }
+    #testimonial-images.slick-slider img{
+        display: inline-block;
+    }
+    
+    #home-appointment .col-md-6.left-section:after, #home-appointment .col-md-6.right-section:after{
+        display: none;
+    }
+    .home-appointment-form{
+        padding-right: 0;
+        padding-bottom: 45px;
+    }
+    #professional-image .item{
+        text-align: center;
+    }
+    #professional-image .item img{
+        display: inline-block;
+    }
+    .right-section-inner{
+        padding-left: 0;
+        text-align: center;
+        padding-bottom: 45px;
+    }
+    #home-appointment .right-section p{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .professional-ct{
+        display: inline-block;
+    }
+    #professional-desc ul.slick-dots{
+        max-width: none;
+    }
+    .counter-wrap .col-md-3{
+        width: 50%;
+        float: left;
+        margin-bottom: 30px;
+    }
+    .footer-widget-wrap .col-md-4{
+        width:100%;
+        float: left;
+        margin-bottom: 30px;
+    }
+    .home-appointment-form .form-group .col-md-6{
+        margin-bottom: 20px;
+    }
+    .home-appointment-form .form-group{
+        margin-bottom: 0;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+   .navbar-nav .open .dropdown-menu {
+       position: static;
+       float: none;
+       width: auto;
+       margin-top: 0;
+       background-color: transparent;
+       border: 0;
+       -webkit-box-shadow: none;
+       box-shadow: none;
+    }
+    .navbar-nav{
+        margin:0;
+    }
+    .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+        padding: 0 15px;
+    }
+    .main-nav-wrap .navbar-default .navbar-nav>li.dropdown:hover:after,
+    .main-nav-wrap .navbar-default .navbar-nav>li.dropdown:focus:after {
+        display: none;
+
+    }
+    .dropdown-menu{
+        position: static;
+        display: block !important;
+        width: 100%;
+        float: none;
+    }
+    .main-nav-wrap .navbar-default .navbar-nav>li{
+        margin-right: 0;
+    }
+    .history-section .col-md-4{
+        text-align: center;
+    }
+    .history-section .col-md-4 img{
+        display: inline-block;
+    }
+    .professional-on-about .col-md-3{
+        float: left;
+        width: 50%;
+        margin: 0 0 30px;
+    }
+    .professional-about-ct-wrap a img{
+        width: 100%;
+        max-width: none;
+    }
+    .history-section h3, .history-ct{
+        padding-left: 0;
+    }
+    .sidebar{
+        padding-bottom: 45px;
+    }
+    #career-section .widget_categories ul{
+        clear: both;
+        overflow: hidden;
+    }
+    #career-section .widget_categories ul li{
+        float: left;
+        width: 50%;
+    }
+    .apply-job-form .form-group{
+        margin-bottom: 0;
+    }
+    .apply-job-form .form-control{
+        margin-bottom: 20px;
+    }
+    .apply-job-form .upload-cv .form-control{
+        margin-bottom: 0px;
+    }
+    .upcv{
+        margin-bottom: 20px;
+    }
+    .apply-img-wrap{
+        display: none;
+    }
+    .job-detail-ct {
+        max-width: none;
+        background: #e6f0ef;
+        min-height: 285px;
+        position: static;
+        right: 0;
+        bottom: 0;
+        padding: 40px;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+    .job-detail{
+        background: none;
+        min-height: 0;
+    }
+    #contact-widget, .contact-detail-ct, .contact-detail-soc{
+        padding-bottom: 45px;
+        max-width: none;
+    }
+    .tab-departments.nav-tabs>li{
+        width: 50%;
+        border: 1px solid #eae9e7 !important;
+    }
+    .gallery-item{
+        width: 50%;
+        float: left;
+    }
+    .gallery-item img{
+        width: 100%;
+        max-width: none;
+    }
+    #home-appointment.homepage-2 .row >.col-md-6.app .insider{
+        margin:0 auto;
+        padding:0 15px;
+    }
+    .service-table .service-item{
+        height: auto;
+    }
+    .service-table > .clearfix + .service-item{
+        border: 0;
+    }
+    .service-table > .clearfix{
+        border:0;
+    }
+    .servicescon{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .comment-form .form-group{
+        margin-bottom: 0;
+    }
+    .comment-form .form-control{
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media (max-width: 768px){
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .addtocart-wrap .form-control{
+        margin-bottom: 20px;
+    }
+    .s-title .sidebar .widget-title{
+        margin-top: 30px;
+    }
+    
+}
+
+@media (max-width:715px){
+
+    .big-title-slider{
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .big-title-slider span{
+        font-size: 16px;
+    }
+    .slider-desc .btn-booking{
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+@media (max-width:545px){
+	
+	
+.top-booking {
+   
+    position: absolute;
+    right: 20px;
+    top: 28px;
+}
+.help{
+display:none !important;
+}
+.call{
+display:none !important;
+}
+.logo {
+    float: left;width:200px
+   
+}
+.mobile_logo{
+		display: block !important;
+		width: 62px !important;}
+    .info-section{
+        text-align: center;
+    }
+    .help {
+        border-right: 1px solid #e3e7ec;
+        float: none;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        display: inline-block;
+    }
+    .call {
+        float: none;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        display: inline-block;
+    }
+    .top-booking{
+        float: none;
+        display: inline-block;
+    }
+    .tab-services>li{
+        float: none;
+        width: 100%;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    .tab-services>li:last-child>a, .tab-services>li:first-child>a{
+        border-radius: 5px;
+    }
+    .play-button img{
+        max-width: 35px;
+    }
+    .video-blog-ct .blog-ct-image .play-button{
+        top: 25%;
+    }
+    .table-responsive{
+        padding: 10px;
+    }
+    table.cart{
+        width: 545px;
+    }
+    .testimonial-ct.align-left p{
+        padding-right: 0;
+    }
+    .testimonial-ct.align-right p{
+        padding-left: 0;
+    }
+    .testimonial-ct.align-right p:after, .testimonial-ct.align-left p:after{
+        display: none;
+    }
+}
+@media (max-width:520px){
+    .product-item{
+        float: none;
+        width: 100%;
+    }
+}
+@media (max-width:495px){
+    .slider-desc .content {
+        margin-top: 3%;
+    }
+    .big-title-slider{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .big-title-slider span{
+        font-size: 13px;
+    }
+    .slider-desc .btn-booking {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+    .gallery-item{
+        width: 100%;
+        float: none;
+    }
+    #gallery-section h3, #filter-gallery.filter{
+        float: none;
+        margin-bottom: 15px !important;
+        clear: both;
+        overflow: hidden;
+    }
+    #filter-gallery.filter li{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width:452px){
+    .blog-control .left, .blog-control .ct-share{
+        float: none;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .video-blog-ct .blog-ct-image .play-button{
+        top: 10%;
+    }
+    #career-section .widget_categories ul li {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media (max-width:440px){
+    .news, .counter-wrap .col-md-3, .professional-on-about .col-md-3, .product-item{
+        width: 100%;
+        float: none;
+    }
+}
+@media (max-width:420px){
+    
+    .footer-credits .credits, .ft-soc{
+        float: none;
+        margin-bottom: 15px;
+    }
+    .page-title{
+        font-size: 30px;
+    }
+    .pagination>li>a, .pagination>li>span{
+        margin-left: 5px;
+    }
+    .blog-ct-image .entry-date strong{
+        font-size: 28px;
+        line-height: normal;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .blog-ct-image .entry-date em{
+        font-size: 10px;
+        display: block;
+        line-height: normal;
+    }
+    .blog-ct-image .entry-date{
+        width: auto;
+        height: auto;
+        padding:8px 15px;
+    }
+    
+}
+@media (max-width:380px){
+    .help{
+        border-right: 0;
+    }
+    .tab-departments.nav-tabs>li>a span{
+        font-size: 12px;
+    }
+    .media-body, .media-left, .media-right{
+        display: block;
+        margin-bottom: 15px;
+    }
+    #comment-list .media-body{
+        padding-left: 0;
+    }
+    .s-price .left, .s-price .right{
+        float: none;
+        margin-bottom: 15px;
+    }
+}

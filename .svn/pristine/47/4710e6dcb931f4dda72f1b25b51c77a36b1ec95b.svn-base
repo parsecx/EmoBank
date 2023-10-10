@@ -1,0 +1,94 @@
+﻿using DAL;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Login : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void btnLogin_Click(object sender, EventArgs e)
+    {
+        if (Login1())
+        {
+            Response.Redirect("frmUsers.aspx");
+        }
+        else
+        {
+            lblMsg.InnerHtml = Common.ShowMessage("User Cridentials are wrong.", 2);
+        }
+    }
+    private bool Login1()
+    {
+        string userName = inputName.Value.Trim();
+        string encry_password = inputPassword.Text.Trim();
+        string UserId = "";
+        string UserType = "";
+        string hPassword, sPassword;
+        int result = IsValidUser(userName, out hPassword, out sPassword, out UserId, out UserType);
+        if (result > 0)
+        {
+            clsencrypt.classxx.Class1 encry = new clsencrypt.classxx.Class1();
+            encry_password = encry.encrypt(inputPassword.Text);
+            if (encry_password == hPassword)
+            {
+                Session["UserId"] = UserId;
+                Session["UserType"] = UserType;
+                Session["userName"] = userName;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+    private int IsValidUser(string userName, out string hPassword, out string sPassword, out string UserId, out string UserType)
+    {
+        hPassword = string.Empty;
+        sPassword = string.Empty;
+        UserId = string.Empty;
+        UserType = string.Empty;
+        SqlHelper SqlHelp = new SqlHelper();
+        SqlParameter[] oPera =
+        {
+            new SqlParameter("@UserName",inputName.Value),
+        };
+        string result = SqlHelp.ExecuteScalar("Select count(*) from Emobank_Users where UserID=@UserName ", oPera, CommandType.Text).ToString();
+        int IsValid = 0;
+        if (result != "0")
+        {
+            SqlHelp = new SqlHelper();
+            SqlParameter[] oPera1 =
+        {
+            new SqlParameter("@UserName",inputName.Value),
+        };
+            SqlDataReader dr = SqlHelp.ExecuteReader("Select * from Emobank_Users where UserID=@UserName", oPera1, CommandType.Text);
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    hPassword = dr["PSW"] == DBNull.Value ? string.Empty : dr["PSW"].ToString();
+                    sPassword = dr["PSW"] == DBNull.Value ? string.Empty : dr["PSW"].ToString();
+                    UserId = dr["CodID"] == DBNull.Value ? string.Empty : dr["CodID"].ToString();
+                    UserType = dr["TypeUser"] == DBNull.Value ? string.Empty : dr["TypeUser"].ToString();
+                }
+                dr.Close();
+                dr.Dispose();
+            }
+            IsValid = 1;
+        }
+        return IsValid;
+    }
+}

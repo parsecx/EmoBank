@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Security.Cryptography;
+using System.IO;
+using System.Text;
+using System.Collections;
+
+public partial class MasterPage : System.Web.UI.MasterPage
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(Convert.ToString(Session["UserId"])))
+        {
+            Response.Redirect("Login.aspx");
+        }
+    }
+   
+  
+
+
+    public void ClearApplicationCache()
+    {
+        List<string> keys = new List<string>();
+
+        // retrieve application Cache enumerator
+        IDictionaryEnumerator enumerator = Cache.GetEnumerator();
+
+        // copy all keys that currently exist in Cache
+        while (enumerator.MoveNext())
+        {
+            keys.Add(enumerator.Key.ToString());
+        }
+
+        // delete every key from cache
+        for (int i = 0; i < keys.Count; i++)
+        {
+            Cache.Remove(keys[i]);
+        }
+    }
+
+
+    protected void lnkLogOut_Click(object sender, EventArgs e)
+    {
+        HttpContext.Current.Response.AddHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        HttpContext.Current.Response.AddHeader("Pragma", "no-cache");
+        HttpContext.Current.Response.AddHeader("Expires", "0");
+
+        Session.Clear();
+        Session.Abandon();
+        Session.RemoveAll();
+
+        if (Request.Cookies["ASP.NET_SessionId"] != null)
+        {
+            Response.Cookies["ASP.NET_SessionId"].Value = string.Empty;
+            Response.Cookies["ASP.NET_SessionId"].Expires = DateTime.Now.AddMonths(-20);
+        }
+
+        if (Request.Cookies["AuthToken"] != null)
+        {
+            Response.Cookies["AuthToken"].Value = string.Empty;
+            Response.Cookies["AuthToken"].Expires = DateTime.Now.AddMonths(-20);
+        }
+        Response.Cache.SetExpires(DateTime.UtcNow.AddMinutes(-1));
+        Response.Cache.SetCacheability(HttpCacheability.NoCache);
+        Response.Cache.SetNoStore();
+        ClearApplicationCache();
+        Context.RewritePath("~/Login.aspx");
+        Response.Redirect("~/Login.aspx");
+
+    }
+    
+}

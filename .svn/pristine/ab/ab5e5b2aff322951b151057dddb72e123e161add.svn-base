@@ -1,0 +1,427 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+      <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Emobank</title>
+        
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+        
+        <!-- Font Awesome -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        
+        <!-- pretty-photo -->
+        <link href="css/prettyPhoto.css" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- slick carousel -->
+        <link href="css/slick.css" rel="stylesheet">
+        
+        <!-- animate -->
+        <link href="css/animate.css" rel="stylesheet">
+        
+        <!-- animate -->
+        <link href="css/datepicker.css" rel="stylesheet">
+        
+        <!-- Main Style -->
+        <link href="style.css" rel="stylesheet">
+        <link href="responsive.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+     <div id="wrapper" class="homepage-1"> <!-- Wrapper -->
+            
+            <div id="header" class="wow fadeInDown"><!-- Header -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="logo-wrap">
+                                <a href="index.html" class="logo">
+                                    <img src="images/logo.png" alt="logo" class="img-responsive main_logo">
+									<!--<img src="images/Logo4.png"  class="mobile_logo" style="display:none"/>-->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="info-nav-wrap"> <!-- Top section -->
+                                <div class="info-section">
+                                    <div class="right">
+                                        <div class="help">
+                                            <a href="">
+                                                <i class="fa fa-mail"></i>
+                                                <div class="left">
+                                                    <span>Email</span>Live help
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="call">
+                                            <a href="tel:+985-524-223">
+                                                <i class="fa fa-mobile"></i>
+                                                <div class="left">
+                                                    <span>Call us</span>+985 524 223
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </a>
+                                        </div>
+                                        <div class="top-booking">
+                                            <a href="login.html" class="btn btn-default btn-booking">Login</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div> <!-- Top section -->
+                            
+                            <div class="main-nav-wrap"> <!-- Main navigation -->
+                                
+                                <nav class="navbar navbar-default">
+                                    <div class="container-fluid">
+                                        <!-- Brand and toggle get grouped for better mobile display -->
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                        <!-- Collect the nav links, forms, and other content for toggling -->
+                                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                            <ul class="nav navbar-nav" style="float:right">
+                                              <!--  
+                                                -->
+												
+                                                <li><a href="#">donors</a></li>
+                                                <li><a href="#">Veterinary clinics</a></li>
+                                                <li><a href="#">Blood Bank and Blood products</a></li>
+
+                                                
+                                             
+                                                <li><a href="contact.html">Contact us</a></li>
+                                            </ul>
+                                        </div><!-- /.navbar-collapse -->
+                                    </div><!-- /.container-fluid -->
+                                </nav>
+                                
+                            </div> <!-- Main navigation -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Header -->
+            
+            <div id="slider-section" class="wow fadeInUp"><!-- Slider -->
+                <div id="home-slider">
+                    <div class="item">
+                        <img src="images/slide-1.jpg" alt="slide-1" class="img-responsive"/>
+                       <!-- <div class="slider-desc">
+                            <div class="container">
+                                <div class="content">
+                                    <div class="small-title-slider font-title">Get</div>
+                                    <div class="big-title-slider font-title">Blood Bank <span>Subheading</span></div>
+                                    <a href="" class="btn btn-default btn-booking">Dummy Text</a>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                    
+                </div>
+            </div><!-- Slider -->
+            
+            <div class="button-banner-wrap wow fadeInDown"><!-- Btn Banner -->
+                <div class="container">
+                    <div class="row button-banner">
+                        <div class="col-md-4 first">
+                            <a class="btn btn-default">
+                                <div class="inner">
+                                    <i class="fa fa-clock-o"></i><span>Opening hours</span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 mid">
+                            <a class="btn btn-default">
+                                <div class="inner">
+                                    <i class="fa fa-medkit"></i><span>Emergancy case</span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 last">
+                            <a class="btn btn-default">
+                                <div class="inner">
+                                    <i class="fa fa-stethoscope"></i><span>Doctors timetable</span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Btn Banner -->
+            
+            <div id="services-section" class="wow fadeInDown"> <!-- Services Tab -->
+                
+                <div class="services-tab-nav-wrap"><!-- Tab  Nav-->
+                    <div class="container">
+                        <div class="text-center">
+                            <ul class="nav nav-tabs tab-services" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#services" aria-controls="services" role="tab" data-toggle="tab">
+                                        Our Services
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#why" aria-controls="why" role="tab" data-toggle="tab">
+                                       About us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- Tab  Nav-->
+                
+                <div class="services-tab-content-wrap"><!-- Tab  Content -->
+                    <div class="container">
+                        <div class="tab-content">
+                            
+                            <div role="tabpanel" class="tab-pane fade in active" id="services"><!-- Tab  Content #1 -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <a href="" class="services-hover">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="servicescon medical-care"></div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="services-excerpt">
+                                                        <div class="small-line"></div>
+                                                        <h3 class="font-title">Heading</h3>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="services-hover">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="servicescon medical-conseling"></div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="services-excerpt">
+                                                        <div class="small-line"></div>
+                                                        <h3 class="font-title">Heading</h3>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="services-hover">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="servicescon medical-treatment"></div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="services-excerpt">
+                                                        <div class="small-line"></div>
+                                                        <h3 class="font-title">Heading</h3>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="services-hover">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="servicescon medical-help"></div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="services-excerpt">
+                                                        <div class="small-line"></div>
+                                                        <h3 class="font-title">Heading</h3>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="" class="services-hover">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="servicescon medical-consult"></div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="services-excerpt">
+                                                        <div class="small-line"></div>
+                                                        <h3 class="font-title">Heading</h3>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="services-hover">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="servicescon medical-monitoring"></div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="services-excerpt">
+                                                        <div class="small-line"></div>
+                                                        <h3 class="font-title">Heading</h3>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                               
+<!--							   <div class="text-center">
+                                    <a href="" class="btn btn-default">View all services</a>
+                                </div>
+                                -->
+                            </div><!-- Tab  Content #1 -->
+                            
+                            <div role="tabpanel" class="tab-pane fade" id="why"><!-- Tab  Content #2 -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                       
+                                            <div class="row">
+                                              
+                                                <div class="col-md-12">
+                                                    <div class="services-excerpt">
+                                                        <div class="small-line"></div>
+                                                        <h3 class="font-title">Heading</h3>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+															 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+															  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+															   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                     
+                                       
+                                        
+                                    </div>
+                                    
+                             
+                             
+                                    
+                                </div>
+                            </div><!-- Tab  Content #2 -->
+                            
+                        </div>
+                    </div>
+                </div><!-- Tab  Content -->
+                
+            </div><!-- Services Tab -->
+            
+            <div id="testimonial-section" class="wow fadeInDown"><!-- Testimonial -->
+                <div class="hr">
+                </div>
+                <div class="testimonial-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div id="testimonial-images">
+                                    <div class="item">
+                                        <img src="images/testimony-1.png" alt="" class="img-responsive">
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <h3 class="font-title">Headinf</h3>
+                                <div id="testimonial-desc">
+                                    <div>
+                                        <div class="testimonial-content">
+                                            <p class="font-title">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                                            </p>
+                                            <div class="name font-title">Richard Maxmarge<span>Creative Director</span></div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Testimonial -->
+            
+
+    
+            <div class="footer-credits wow fadeInUp"><!-- Footer Copy right/credits -->
+                <div class="container">
+                    <div class="credits">© 2016 <a href="">Emobank</a>. All rights reserved</div>
+                    <div class="ft-soc">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href="" class="last"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div><!-- Footer Copy right/credits -->
+            
+            
+        </div> <!-- Wrapper -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- slick carousel -->
+        <script src="js/slick.js"></script>
+        <!-- waypoint -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <!-- pretty photo -->
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <!-- quicksand -->
+        <script src="js/quicksand.js"></script>
+        <!-- quicksand -->
+        <script src="js/wow.js"></script>
+        <!-- Countup -->
+        <script src="js/jquery.counterup.min.js"></script>
+        <!-- Countup -->
+        <script src="js/datepicker.js"></script>
+        <!-- theme script -->
+        <script src="js/theme-script.js"></script>
+    </div>
+    </form>
+</body>
+</html>

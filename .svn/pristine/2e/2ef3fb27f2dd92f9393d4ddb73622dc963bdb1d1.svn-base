@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <system.web>
+    <compilation debug="true" targetFramework="4.0"/>
+    <customErrors mode="Off"/>
+    
+    <globalization culture="en-GB"/>
+  </system.web>
+  <appSettings>
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="None"/>
+    <add key="SenderEmail" value="vermadeveloper@gmail.com"/>
+    <add key="SenderEmailPwd" value="9996898969"/>
+    <add key="hostname" value="smtp.gmail.com"/>
+    <add key="port" value="587"/>
+    <add key="defaultPsw" value="12345678"/>
+    <!--Test credentials-->
+    <!--Test credentials-->
+  </appSettings>
+  <connectionStrings>
+    <!--<add name="ConStrng" connectionString="server=192.168.50.20;initial catalog=EmoBank;uid=sa;pwd=spic123#;" providerName="System.Data.SqlClient"/>-->
+    <!--<add name="ConStrng" connectionString="server=192.168.50.3;initial catalog=testB;uid=sa;pwd=HCM780M;" providerName="System.Data.SqlClient"/>-->
+    <!--<add name="ConStrng" connectionString="server=192.168.50.20;initial catalog=EmoBank;uid=sa;pwd=spic123#;" providerName="System.Data.SqlClient"/>-->
+    <add name="ConStrng" connectionString="server=SQL5026.Smarterasp.net ;initial catalog=DB_9FF69E_emobank;uid=DB_9FF69E_emobank_admin;pwd=Spic123#;" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+</configuration>

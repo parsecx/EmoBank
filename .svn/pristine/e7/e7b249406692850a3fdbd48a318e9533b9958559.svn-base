@@ -1,0 +1,109 @@
+﻿using DAL;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class frmUpdateSamplingPoint : System.Web.UI.Page
+{
+    SqlHelper cls = new SqlHelper();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            string CodInt = Convert.ToString(Session["SampleCodInt"]);
+            if (!string.IsNullOrEmpty(CodInt))
+            {
+                BindCentralBankById(CodInt);
+            }
+            else
+            {
+                Session.Remove("SampleCodInt");
+                Response.Redirect("frmSamplingPointList.aspx");
+            }
+        }
+    }
+    private void BindCentralBankById(string CntrBnkId)
+    {
+        SqlParameter[] oPera =
+        {
+            new SqlParameter("@CodId",CntrBnkId)
+        };
+        DataTable dt = new DataTable();
+        dt = cls.ExecuteDataTable("GetSamplingPointById", oPera, CommandType.StoredProcedure);
+        if (dt.Rows.Count > 0)
+        {
+            txtCodice.Text = dt.Rows[0]["CodID"].ToString();
+            txtCap.Text = dt.Rows[0]["PostalCode"].ToString();
+            txtDenominazione.Text = dt.Rows[0]["Description"].ToString();
+            txtE_mail.Text = dt.Rows[0]["Email"].ToString();
+            txtNote.Text = dt.Rows[0]["Note"].ToString();
+            txtIndirzzo.Text = dt.Rows[0]["Address"].ToString();
+            txtTelefono.Text = dt.Rows[0]["Phone"].ToString();
+            txtLocalita.Text = dt.Rows[0]["resort"].ToString();
+            txtProvincia.Text = dt.Rows[0]["province"].ToString();
+            txtReferente.Text = dt.Rows[0]["Contactperson"].ToString();
+        }
+    }
+
+    private void UpdateCentralBank()
+    {
+        msg.Visible = true;
+        SqlParameter[] oPera =
+        {
+            new SqlParameter("@Description",txtDenominazione.Text.Trim()),
+            new SqlParameter("@Contactperson",txtReferente.Text.Trim()),
+            new SqlParameter("@Address",txtIndirzzo.Text.Trim()),
+            new SqlParameter("@resort",txtLocalita.Text.Trim()),
+            new SqlParameter("@province",txtProvincia.Text.Trim()),
+            new SqlParameter("@PostalCode",txtCap.Text.Trim()),
+            new SqlParameter("@Phone",txtTelefono.Text.Trim()),
+            new SqlParameter("@Email",txtE_mail.Text.Trim()),
+            new SqlParameter("@Note",txtNote.Text.Trim()),
+            new SqlParameter("@CodId",txtNote.Text.Trim())
+            
+        };
+        int result = cls.ExecuteNonQuery("SamplingPointUpdate", oPera, CommandType.StoredProcedure);
+        msg.Visible = true;
+        if (result > 0)
+        {
+            ClearInput();
+            lblmsg.InnerHtml = Common.ShowMessage("Record Updated Successfully.", 1);
+            Session.Remove("SampleCodInt");
+            Response.Redirect("frmSamplingPointList.aspx");
+        }
+        else if (result == 0)
+        {
+            lblmsg.InnerHtml = Common.ShowMessage("Error in data. Contact with administrator", 3);
+        }
+
+    }
+    private void ClearInput()
+    {
+        txtCodice.Text = string.Empty;
+        txtCap.Text = string.Empty;
+        txtDenominazione.Text = string.Empty;
+        txtE_mail.Text = string.Empty;
+        txtNote.Text = string.Empty;
+        txtTelefono.Text = string.Empty;
+        lblmsg.InnerHtml = "";
+        txtIndirzzo.Text = string.Empty;
+        txtProvincia.Text = string.Empty;
+        txtReferente.Text = string.Empty;
+        txtLocalita.Text = string.Empty;
+    }
+    protected void btnUpdate_Click(object sender, EventArgs e)
+    {
+        UpdateCentralBank();
+
+    }
+    protected void btnBack_Click(object sender, EventArgs e)
+    {
+        Session.Remove("SampleCodInt");
+        Response.Redirect("frmSamplingPointList.aspx");
+    }
+}

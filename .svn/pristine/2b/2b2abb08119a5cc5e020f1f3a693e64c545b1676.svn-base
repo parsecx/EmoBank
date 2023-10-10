@@ -1,0 +1,163 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MasterPage.master" AutoEventWireup="true" CodeFile="frmUpdateCentralBank.aspx.cs" Inherits="frmUpdateCentralBank" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style>
+        .floatRight {
+            float: right;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="page animsition">
+        <div class="page-header">
+            <h1 class="page-title">Banca Sangue / Emoderivati</h1>
+        </div>
+        <div class="page-content">
+            <div class="panel">
+                <div class="panel-body container-fluid">
+                    <div class="row row-lg">
+                        <div class="col-sm-12">
+                            <!-- Example Basic Form -->
+                            <div class="example-wrap">
+                                <h4>Anagrafica Banca</h4>
+                                <div class="example">
+                                    <div class="row" id="msg" runat="server" visible="false">
+                                        <div class="form-group col-sm-12">
+                                            <div id="lblmsg" runat="server">
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="row">
+                                        <div class="form-group col-sm-9">
+                                          
+                                        </div>
+                                         <div class="form-group col-sm-1">
+                                              <asp:Button ID="btnBack" Text="Back" CssClass="btn btn-danger" runat="server" OnClick="btnBack_Click" />
+                                        </div>
+                                        <div class="form-group col-sm-2">
+                                            <asp:Button ID="btnUpdate" Text="Update Registra" ValidationGroup="A" CssClass="btn btn-primary floatRight" runat="server" OnClick="btnUpdate_Click" />
+                                        </div>
+                                       
+                                    </div>
+
+                                    <div class="row" runat="server" id="CodicInterno">
+                                        <div class="form-group col-sm-6">
+                                            <label class="control-label" for="inputBasicFirstName">Codice Interno</label>
+                                            <asp:TextBox type="text" runat="server" MaxLength="9" class="form-control" ID="txtCodice"
+                                                autocomplete="off" ReadOnly="true"></asp:TextBox>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <label class="control-label" for="inputBasicFirstName">Denominazione</label>
+                                            &nbsp;
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ValidationGroup="A" runat="server"
+                                                ErrorMessage="Enter Denominazione" SetFocusOnError="true" ControlToValidate="txtDenominazione" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                            <asp:TextBox type="text" runat="server" class="form-control" MaxLength="40" ID="txtDenominazione"
+                                                placeholder="Denominazione" autocomplete="off"></asp:TextBox>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <label class="control-label" for="inputBasicFirstName">Indirzzo</label>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="A" runat="server"
+                                                ErrorMessage="Enter Indirzzo" SetFocusOnError="true" ControlToValidate="txtIndirzzo" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                            <asp:TextBox type="text" runat="server" class="form-control" MaxLength="40" ID="txtIndirzzo"
+                                                placeholder="Indirzzo" autocomplete="off"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <label class="control-label" for="inputBasicFirstName">Localita</label>
+                                            &nbsp;
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup="A"
+                                                runat="server" ErrorMessage="Enter Localita" SetFocusOnError="true" ControlToValidate="txtLocalita" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                            <asp:TextBox type="text" runat="server" MaxLength="30" class="form-control" ID="txtLocalita"
+                                                autocomplete="off"></asp:TextBox>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-6">
+                                            <label class="control-label" for="inputBasicEmail">Provincia</label>
+                                            &nbsp;
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup="A"
+                                                runat="server" SetFocusOnError="true" ErrorMessage="Enter Provincia" ControlToValidate="txtProvincia" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                            <asp:TextBox type="text" runat="server" class="form-control" ID="txtProvincia" name="inputEmail"
+                                                placeholder="Provincia" autocomplete="off" MaxLength="5"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label class="control-label" for="inputBasicEmail">Cap</label>
+                                            &nbsp;
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ValidationGroup="A"
+                                                runat="server" SetFocusOnError="true" ErrorMessage="Enter Cap" ControlToValidate="txtCap" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                            <asp:CompareValidator ID="CompareValidator1" runat="server" Type="Integer" Operator="DataTypeCheck"
+                                                ControlToValidate="txtCap" ErrorMessage="Enter valid Postal Code">*</asp:CompareValidator>
+                                            <asp:TextBox type="text" runat="server" class="form-control" ID="txtCap" name="inputEmail"
+                                                placeholder="Cap" autocomplete="off" MaxLength="5"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-6">
+                                            <label class="control-label" for="inputBasicEmail">Telefono</label>
+                                            &nbsp;
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup="A"
+                                                runat="server" SetFocusOnError="true" ErrorMessage="Enter Telefone" ControlToValidate="txtTelefono" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                            <asp:CompareValidator ID="c1" runat="server" Type="Integer" Operator="DataTypeCheck"
+                                                ControlToValidate="txtTelefono" ErrorMessage="Enter valid Mobile">*</asp:CompareValidator>
+                                            <asp:TextBox type="text" runat="server" class="form-control" ID="txtTelefono" name="inputEmail"
+                                                placeholder="Telefono" autocomplete="off" MaxLength="30"></asp:TextBox>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label class="control-label" for="inputBasicEmail">E_mail</label>
+                                            &nbsp;
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ValidationGroup="A"
+                                                runat="server" SetFocusOnError="true" ErrorMessage="Enter Email Id" ControlToValidate="txtE_mail" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                            <asp:RegularExpressionValidator ID="EmailIDValidation" runat="server" ControlToValidate="txtE_mail"
+                                                ErrorMessage="Invalid Email Address" ValidationGroup="A" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                                Text="*" Display="Dynamic" SetFocusOnError="True" ForeColor="Red"></asp:RegularExpressionValidator>
+                                            <asp:TextBox type="text" runat="server" class="form-control" ID="txtE_mail" name="inputEmail"
+                                                placeholder="E_mail" autocomplete="off" MaxLength="30"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="inputBasicPassword">Referente</label>
+                                        <asp:TextBox type="text" runat="server" class="form-control"
+                                            ID="txtReferente" name="txtReferente"
+                                            placeholder="Referente" autocomplete="off" MaxLength="30"></asp:TextBox>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label" for="inputBasicPassword">Note</label>
+                                        <asp:TextBox type="text" runat="server" class="form-control"
+                                            ID="txtNote" name="txtNote"
+                                            placeholder="Note" autocomplete="off" TextMode="MultiLine" MaxLength="100"></asp:TextBox>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-6">
+                                            <asp:ValidationSummary ID="v1" runat="server" ValidationGroup="A" ForeColor="Red" />
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix hidden-xs"></div>
+
+
+                        <!-- End Example Horizontal Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel Inline Form -->
+
+
+    </div>
+</asp:Content>
+

@@ -1,0 +1,90 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class UpdatePassword : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["Id"] != null)
+            {
+                string Email = "";
+                try
+                {
+                    Email = Request.QueryString["Id"].ToString();
+
+
+                   
+
+
+                    Email = encrydecryp.Decrypt(Email);
+
+                    Email = Email.Substring(0, Email.IndexOf("@#$"));
+                    txtEmail.Text = Email;
+
+                }
+                catch (Exception ex)
+                {
+                    Response.Redirect(ResolveUrl("~/Index.aspx"));
+                }
+
+
+            }
+        }
+
+    }
+    protected void btnForgot_Click(object sender, EventArgs e)
+    {
+        string newPwd = "";
+        string conPwd = "";
+        string oldp = "";
+        int x = hdnew.Value.Length - 6;
+        if (hdnew.Value.Length < 20)
+        {
+            lblmsg.InnerHtml = Common.ShowMessage("Password must be minimum 8 character", 2);
+            
+        }
+
+        else
+        {
+
+            newPwd = hdnew.Value.Substring(4, 3) + hdnew.Value.Substring(11, 3) + hdnew.Value.Substring(18);
+
+            int y = hdconfirm.Value.Length - 6;
+            conPwd = hdconfirm.Value.Substring(4, 3) + hdconfirm.Value.Substring(11, 3) + hdconfirm.Value.Substring(18);
+
+            int z = hdold.Value.Length - 6;
+            oldp = hdold.Value.Substring(4, 3) + hdold.Value.Substring(11, 3) + hdold.Value.Substring(18);
+            if (oldp.Trim().Length == 0)
+            {
+                lblmsg.InnerHtml = Common.ShowMessage("Fill Old Password", 2);
+            }
+            else if (newPwd.Trim().Length == 0)
+            {
+                lblmsg.InnerHtml = Common.ShowMessage("Fill New Password", 2);
+            }
+
+            else if (newPwd.Trim() != conPwd.Trim())
+            {
+                lblmsg.InnerHtml = Common.ShowMessage("Check New Passowrd and Confirm Password", 2);
+            }
+            else if (newPwd.Length >= 6)
+            {
+                if (newPwd == conPwd)
+                {
+
+
+                  
+                }
+
+            }
+
+        }
+
+    }
+}

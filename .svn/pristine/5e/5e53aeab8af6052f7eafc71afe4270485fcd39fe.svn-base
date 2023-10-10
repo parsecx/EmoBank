@@ -1,0 +1,37 @@
+﻿using DAL;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class User_frmForgotPassword : System.Web.UI.Page
+{
+    SqlHelper cls = new SqlHelper();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void btnForgot_Click(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(txtEmail.Text.Trim()))
+        {
+            lblmsg.InnerHtml = Common.ShowMessage("Enter Email", 2);
+        }
+        else
+        {
+            string result = cls.ExecuteScalar("Select count(*) from Emobank_Users where Email='" + txtEmail.Text + "'", CommandType.Text).ToString();
+            if (Convert.ToInt32(result) > 0)
+            {
+                lblmsg.InnerHtml = Common.ShowMessage("Instructions sent on your Email Id.", 1);
+                txtEmail.Text = string.Empty;
+            }
+            else
+            {
+                lblmsg.InnerHtml = Common.ShowMessage("Entered Email is not registered with us.", 2);
+            }
+        }
+    }
+}

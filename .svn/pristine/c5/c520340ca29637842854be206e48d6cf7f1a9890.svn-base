@@ -1,0 +1,53 @@
+/*!
+ * Remark (http://getbootstrapadmin.com/remark)
+ * Copyright 2016 amazingsurge
+ * Licensed under the Themeforest Standard Licenses
+ */
+function cellStyle(value, row, index) { var classes = ["active", "success", "info", "warning", "danger"]; return index % 2 === 0 && index / 2 < classes.length ? { classes: classes[index / 2] } : {} } function rowStyle(row, index) { var classes = ["active", "success", "info", "warning", "danger"]; return index % 2 === 0 && index / 2 < classes.length ? { classes: classes[index / 2] } : {} } function scoreSorter(a, b) { return a > b ? 1 : b > a ? -1 : 0 } function nameFormatter(value) { return value + '<i class="icon wb-book" aria-hidden="true"></i> ' } function starsFormatter(value) { return '<i class="icon wb-star" aria-hidden="true"></i> ' + value } function queryParams() { return { type: "owner", sort: "updated", direction: "desc", per_page: 100, page: 1 } } function buildTable($el, cells, rows) { var i, j, row, columns = [], data = []; for (i = 0; cells > i; i++) columns.push({ field: "field" + i, title: "Cell" + i }); for (i = 0; rows > i; i++) { for (row = {}, j = 0; cells > j; j++) row["field" + j] = "Row-" + i + "-" + j; data.push(row) } $el.bootstrapTable("destroy").bootstrapTable({ columns: columns, data: data, iconSize: "outline", icons: { columns: "wb-list-bulleted" } }) } !function (document, window, $) {
+    "use strict"; var Site = window.Site; $(document).ready(function ($) { Site.run() }), function () {
+        var bt_data =
+            [{ 1: "1", 2: "User 1", 3: "A. EA 8RL", 4: "-", 5: "-", 6: "26/05/2016", 7: "0987654310", 8: "test@gmail.com", 9: "-" },
+             { 1: "2", 2: "User 2", 3: "Alezena Salute", 4: "-", 5: "-", 6: "26/05/2016", 7: "01237654310", 8: "test@gmail.com", 9: "-" },
+            { 1: "3", 2: "User 3", 3: "A.C.F", 4: "-", 5: "-", 6: "26/05/2016", 7: "0223654310", 8: "test@gmail.com", 9: "-" },
+            { 1: "4", 2: "User 4", 3: "A. EA 8RL", 4: "-", 5: "-", 6: "26/05/2016", 7: "8754785412", 8: "test@gmail.com", 9: "-" },
+            { 1: "5", 2: "User 5", 3: "A. EA 8RL", 4: "-", 5: "-", 6: "26/05/2016", 7: "9856487541", 8: "test@gmail.com", 9: "-" },
+            { 1: "6", 2: "User 6", 3: "A. EA 8RL", 4: "-", 5: "-", 6: "26/05/2016", 7: "9548786542", 8: "test@gmail.com", 9: "-" },
+            { 1: "7", 2: "User 7", 3: "A. EA 8RL", 4: "-", 5: "-", 6: "26/05/2016", 7: "9654321457", 8: "test@gmail.com", 9: "-" }
+            ];
+        $("#exampleTableFromData").bootstrapTable({ data: bt_data, height: "450" })
+    }(),
+    callData(bt_data), function () {
+        $("#exampleTableFromData1").bootstrapTable({ data: bt_data, height: "450" })
+    }(),
+    function () {
+        $("#exampleTableColumns").bootstrapTable
+          ({
+              url: "../assets/data/bootstrap_table_test.json", height: "700", iconSize: "outline",
+              showColumns: !0, icons: { refresh: "wb-refresh", toggle: "wb-order", columns: "wb-list-bulleted" }
+          })
+    }(),
+    buildTable($("#exampleTableLargeColumns"), 50, 50), function () {
+        $("#exampleTableToolbar").bootstrapTable({
+            url: "../assets/data/bootstrap_table_test2.json", search: !0, showRefresh: !0,
+            showToggle: !0, showColumns: !0, toolbar: "#exampleToolbar", iconSize: "outline", icons: { refresh: "wb-refresh", toggle: "wb-order", columns: "wb-list-bulleted" }
+        })
+    }(), function () {
+        $("#exampleTableEvents").bootstrapTable({
+            url: "../assets/data/bootstrap_table_test.json",
+            search: !0, pagination: !0, showRefresh: !0, showToggle: !0, showColumns: !0, iconSize: "outline", toolbar: "#exampleTableEventsToolbar", icons: { refresh: "wb-refresh", toggle: "wb-order", columns: "wb-list-bulleted" }
+        }); var $result = $("#examplebtTableEventsResult"); $("#exampleTableEvents").on("all.bs.table",
+            function (e, name, args) { }).on("click-row.bs.table", function (e, row, $element)
+            { $result.text("Event: click-row.bs.table") }).on("dbl-click-row.bs.table",
+            function (e, row, $element) { $result.text("Event: dbl-click-row.bs.table") }).on("sort.bs.table",
+            function (e, name, order) { $result.text("Event: sort.bs.table") }).on("check.bs.table",
+            function (e, row) { $result.text("Event: check.bs.table") }).on("uncheck.bs.table",
+            function (e, row) { $result.text("Event: uncheck.bs.table") }).on("check-all.bs.table",
+            function (e) { $result.text("Event: check-all.bs.table") }).on("uncheck-all.bs.table",
+            function (e) { $result.text("Event: uncheck-all.bs.table") }).on("load-success.bs.table",
+            function (e, data) { $result.text("Event: load-success.bs.table") }).on("load-error.bs.table",
+            function (e, status) { $result.text("Event: load-error.bs.table") }).on("column-switch.bs.table",
+            function (e, field, checked) { $result.text("Event: column-switch.bs.table") }).on("page-change.bs.table",
+            function (e, size, number) { $result.text("Event: page-change.bs.table") }).on("search.bs.table",
+            function (e, text) { $result.text("Event: search.bs.table") })
+    }()
+}(document, window, jQuery);

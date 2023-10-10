@@ -1,0 +1,64 @@
+﻿using DAL;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class frmCentralBank : System.Web.UI.Page
+{
+    SqlHelper cls = new SqlHelper();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void btnRegister_Click(object sender, EventArgs e)
+    {
+        SaveCentralBank();
+    }
+    private void SaveCentralBank()
+    {
+        SqlParameter[] oPera =
+        {
+            new SqlParameter("@Description",txtDenominazione.Text.Trim()),
+            new SqlParameter("@Contactperson",txtReferente.Text.Trim()),
+            new SqlParameter("@Address",txtIndirzzo.Text.Trim()),
+            new SqlParameter("@resort",txtLocalita.Text.Trim()),
+            new SqlParameter("@province",txtProvincia.Text.Trim()),
+            new SqlParameter("@PostalCode",txtCap.Text.Trim()),
+            new SqlParameter("@Phone",txtTelefono.Text.Trim()),
+            new SqlParameter("@Email",txtE_mail.Text.Trim()),
+            new SqlParameter("@Note",txtNote.Text.Trim())
+            
+        };
+        int result = cls.ExecuteNonQuery("CentralBankSave", oPera, CommandType.StoredProcedure);
+        msg.Visible = true;
+        if (result > 0)
+        {
+            ClearInput();
+            lblmsg.InnerHtml = Common.ShowMessage("Record Saved Successfully.", 1);
+        }
+        else if (result == 0)
+        {
+            lblmsg.InnerHtml = Common.ShowMessage("Error in data. Contact with administrator", 3);
+        }
+
+    }
+    private void ClearInput()
+    {
+        txtCodice.Text = string.Empty;
+        txtCap.Text = string.Empty;
+        txtDenominazione.Text = string.Empty;
+        txtE_mail.Text = string.Empty;
+        txtNote.Text = string.Empty;
+        txtTelefono.Text = string.Empty;
+        lblmsg.InnerHtml = "";
+        txtIndirzzo.Text = string.Empty;
+        txtProvincia.Text = string.Empty;
+        txtReferente.Text = string.Empty;
+        txtLocalita.Text = string.Empty;
+    }
+}

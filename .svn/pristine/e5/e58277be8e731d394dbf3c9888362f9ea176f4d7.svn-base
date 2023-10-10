@@ -1,0 +1,17 @@
+<div>
+	<table cellspacing="0" rules="all" data-mobile-responsive="true" border="1" border="1" id="ContentPlaceHolder1_grdData" style="border-collapse:collapse;width:100%">
+		<tr>
+			<th scope="col">Cod. Int</th><th scope="col">User-Id</th><th scope="col">Desorizine</th><th scope="col">Tipo</th><th scope="col">Tp.Scad</th><th scope="col">Scad.PSW</th><th scope="col">Telefono</th><th scope="col">Email</th><th scope="col">Note</th>
+		</tr><tr>
+			<td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td>
+		</tr>
+	</table>
+</div><div>
+	<table cellspacing="0" rules="all" data-mobile-responsive="true" border="1" border="1" id="ContentPlaceHolder1_grdData" style="border-collapse:collapse;width:100%">
+		<tr>
+			<th scope="col">Cod. Int</th><th scope="col">User-Id</th><th scope="col">Desorizine</th><th scope="col">Tipo</th><th scope="col">Tp.Scad</th><th scope="col">Scad.PSW</th><th scope="col">Telefono</th><th scope="col">Email</th><th scope="col">Note</th>
+		</tr><tr>
+			<td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td>
+		</tr>
+	</table>
+</div>

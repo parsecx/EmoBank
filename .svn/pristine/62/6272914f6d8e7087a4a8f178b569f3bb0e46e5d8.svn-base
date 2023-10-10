@@ -1,0 +1,75 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PrintLabel.aspx.cs" Inherits="PrintLabel" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="width: 500px; border: solid 1px #000" border="1">
+            <tr>
+                <td colspan="3">
+                    <img src="images/logo.png" width="130px" />
+                </td>
+            </tr>
+            <tr>
+                <td>Protocollo Prelievo</td>
+                <td>Data Prelievo</td>
+                <td>Data Scadenza</td>
+            </tr>
+            <tr>
+                <td><asp:Label ID="lblProtocolNo" runat="server"></asp:Label></td>
+                <td><asp:Label ID="lblDataPrelievo" runat="server"></asp:Label></td>
+                <td><span style="border: solid 1px #000; width: 80%"><asp:Label ID="lblDataScadenza" runat="server"></asp:Label></span></td>
+            </tr>
+            <tr>
+                <td>Tipo Preparato</td>
+                <td>Specie Animale</td>
+                <td>Gruppo Sanguigno</td>
+            </tr>
+            <tr>
+                <td><asp:Label ID="lblTipoPreparato" runat="server"></asp:Label></td>
+                <td><asp:Label ID="lblSpecie" runat="server"></asp:Label></td>
+                <td><span style="border: solid 1px #000; width: 80%"><asp:Label ID="lblGruppo" runat="server"></asp:Label></span></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td>Peso Lordo</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><span style="border: solid 1px #000; width: 80%"><asp:Label ID="lblPesoLordo" runat="server"></asp:Label></span></td>
+            </tr>
+            <tr>
+                <td colspan="3">Composizione
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><asp:Label ID="lblComposizione" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Conservazione</td>
+            </tr>
+            <tr>
+                <td colspan="3"><asp:Label ID="lblConservazione" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Esclusivamente per uso Veterinario ????????
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Image ID="imgBarCode" runat="server" />
+                </td>
+                <td>
+                    <asp:Image ID="imgQrCode" runat="server" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

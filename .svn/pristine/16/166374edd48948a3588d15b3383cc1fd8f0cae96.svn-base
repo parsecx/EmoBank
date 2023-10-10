@@ -1,0 +1,21 @@
+﻿
+.alert-error {
+    color: #fff;
+    background-color:red;
+}
+.alert-success {
+    color: #fff;
+    background-color:green;
+}
+.alert-info {
+    color: #fff;
+    background-color:blue;
+}
+.Head-table select {
+    background: none repeat scroll 0 0 yellow !important;
+}
+.Head-table select {
+ font-size: 11px !important;
+    margin: 10px 2% !important;
+    padding: 0 !important;
+width: 96% !important;}

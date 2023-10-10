@@ -1,0 +1,67 @@
+﻿using DAL;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Text;
+public partial class FrmForgetPassword : System.Web.UI.Page
+{
+    SqlHelper cls = new SqlHelper();
+    clsencrypt.classxx.Class1 c = new clsencrypt.classxx.Class1();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void btnForgot_Click(object sender, EventArgs e)
+    {
+
+        if (string.IsNullOrEmpty(txtEmail.Text.Trim()))
+        {
+            lblmsg.InnerHtml = Common.ShowMessage("Enter Email", 2);
+        }
+        else
+        {
+            //            SqlParameter[] Opare=
+            //            {
+            //new SqlParameter("EmailId", txtEmail.Text)
+            //            };
+
+
+            //            DataTable tb = cls.ExecuteDataTable("sp_GetEmobank_UsersID", Opare, CommandType.StoredProcedure);
+            //            if (tb.Rows.Count>0)
+            //            {
+            System.Random rdmPswd = new Random();
+            int pswd = rdmPswd.Next(10000000, 99999999);
+            clsencrypt.classxx.Class1 encry = new clsencrypt.classxx.Class1();
+            string encry_password = encry.encrypt(pswd.ToString());
+            SqlParameter[] Opara =
+            {
+              new SqlParameter("@Email", txtEmail.Text),
+              new SqlParameter("@Pswd", encry_password)
+            };
+
+            DataTable tbb = cls.ExecuteDataTable("sp_SaveEmobank_UsersID", Opara, CommandType.StoredProcedure);
+            if (tbb.Rows.Count > 0)
+            {
+                var strBldr = new StringBuilder();
+                string Path = ResolveUrl("FrmFrgtUpdatePassword.aspx?Id=" + encrydecryp.Encrypt(tbb.Rows[0]["Email"].ToString() + "@#$"));
+
+                strBldr.Append("<table style='width: 230px'><tr><td colspan='3'><div style='background-color: CornflowerBlue; '><h2 style='color: White;  text-align:center;'>Dear " + tbb.Rows[0]["UserID"] + "</h2></div></td></tr><tr><td colspan='3' style='font-size:16px !important'>Your Temporary Password is:-  <b>" + pswd + "</b> </td><td></tr><tr><td colspan='3'>For Login please open link " + Path + "</td></tr></table> ");
+
+
+                lblmsg.InnerHtml = Common.ShowMessage(strBldr.ToString(), 1);
+                // lblmsg.InnerHtml = Common.ShowMessage("Instructions sent on your Email Id.", 1);
+                txtEmail.Text = string.Empty;
+            }
+            //}
+            else
+            {
+                lblmsg.InnerHtml = Common.ShowMessage("Entered Email is not registered with us.", 2);
+            }
+        }
+    }
+}

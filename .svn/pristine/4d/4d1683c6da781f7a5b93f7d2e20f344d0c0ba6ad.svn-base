@@ -1,0 +1,13 @@
+﻿
+.alert-error {
+    color: #fff;
+    background-color:red;
+}
+.alert-success {
+    color: #fff;
+    background-color:green;
+}
+.alert-info {
+    color: #fff;
+    background-color:blue;
+}

@@ -1,0 +1,99 @@
+<div>
+	<table class="grd" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder1_grd" style="width:50px;border-collapse:collapse;">
+		<tr>
+			<th scope="col">Receipt</th><th scope="col">Date</th><th scope="col">Name</th><th scope="col">Trade</th><th scope="col">RollNo</th><th scope="col">InstallmentName</th><th scope="col">InstallmentAmt</th><th scope="col">Admission Registration Fee,Govt Revenue</th><th scope="col">Caution Money,PLA Account</th><th scope="col">Exam Fee,PLA Account</th><th scope="col">Identity Card Fund,PLA Account</th><th scope="col">Magazine/Brochure Fund,PLA Account</th><th scope="col">Maint. Of Play Ground Fund,PLA Account</th><th scope="col">Placement Registration Fee,IMC Account</th><th scope="col">Stationery Fund/Class Examination,PLA Account</th><th scope="col">Student Fund,PLA Account</th><th scope="col">Tuition fee(1st Sem),Govt Revenue</th><th scope="col">Total(Govt Revenue)</th><th scope="col">Total(IMC Account)</th><th scope="col">Total(PLA Account)</th>
+		</tr><tr>
+			<td>7005/16</td><td>12/07/2016</td><td>TWINKLE TIWARI</td><td>Stenography and Secretarial Asst. (English)</td><td>7005/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7006/16</td><td>12/07/2016</td><td>JYOTI YADAV</td><td>Stenography and Secretarial Asst. (English)</td><td>7006/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7012/16</td><td>12/07/2016</td><td>Ginti thakur</td><td>Stenography and Secretarial Asst. (English)</td><td>7012/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7017/16</td><td>12/07/2016</td><td>AMANDEEP KAUR</td><td>Stenography and Secretarial Asst. (Hindi)</td><td>7017/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7020/16</td><td>12/07/2016</td><td>SAPNA</td><td>Computer Operator and Programming Assistant</td><td>7020/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7022/16</td><td>12/07/2016</td><td>Gurpreet kaur</td><td>Computer Operator and Programming Assistant</td><td>7022/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7023/16</td><td>12/07/2016</td><td>Shilpa</td><td>Stenography and Secretarial Asst. (English)</td><td>7023/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7024/16</td><td>12/07/2016</td><td>rajni</td><td>Stenography and Secretarial Asst. (English)</td><td>7024/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7026/16</td><td>12/07/2016</td><td>SABNAM</td><td>Computer Operator and Programming Assistant</td><td>7026/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7027/16</td><td>12/07/2016</td><td>BABITA</td><td>Stenography and Secretarial Asst. (English)</td><td>7027/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7030/16</td><td>12/07/2016</td><td>KOMAL</td><td>Stenography and Secretarial Asst. (English)</td><td>7030/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7031/16</td><td>12/07/2016</td><td>JYOTI</td><td>Stenography and Secretarial Asst. (English)</td><td>7031/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7033/16</td><td>12/07/2016</td><td>AMANDEEP KAUR</td><td>Stenography 'Punjabi'</td><td>7033/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>100</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>3900</td>
+		</tr><tr>
+			<td>7035/16</td><td>12/07/2016</td><td>SUMAN</td><td>Computer Operator and Programming Assistant</td><td>7035/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7040/16</td><td>12/07/2016</td><td>saraswati Devi</td><td>Stenography and Secretarial Asst. (English)</td><td>7040/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7041/16</td><td>12/07/2016</td><td>KAVITA</td><td>Stenography and Secretarial Asst. (English)</td><td>7041/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7051/16</td><td>12/07/2016</td><td>SIMRAN</td><td>Stenography 'Punjabi'</td><td>7051/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>100</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>3900</td>
+		</tr><tr>
+			<td>7053/16</td><td>12/07/2016</td><td>RAMNEET KAUR</td><td>Stenography and Secretarial Asst. (English)</td><td>7053/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7055/16</td><td>12/07/2016</td><td>ZENAB</td><td>Surface Ornamentation (Embroidery)</td><td>7055/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7056/16</td><td>12/07/2016</td><td>ANJALI</td><td>Stenography and Secretarial Asst. (English)</td><td>7056/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7065/16</td><td>12/07/2016</td><td>sonam</td><td>Computer Operator and Programming Assistant</td><td>7065/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7068/16</td><td>12/07/2016</td><td>GURJEET KAUR</td><td>Surface Ornamentation (Embroidery)</td><td>7068/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7080/16</td><td>12/07/2016</td><td>ANJALI</td><td>Basic Cosmetology</td><td>7080/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7086/16</td><td>12/07/2016</td><td>POOJA KUMARI</td><td>Surface Ornamentation (Embroidery)</td><td>7086/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7088/16</td><td>12/07/2016</td><td>ANJU KUMARI</td><td>Computer Operator and Programming Assistant</td><td>7088/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7091/16</td><td>12/07/2016</td><td>Ramandeep Kaur</td><td>Stenography 'Punjabi'</td><td>7091/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>100</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>3900</td>
+		</tr><tr>
+			<td>7092/16</td><td>12/07/2016</td><td>Manpreet kaur</td><td>Dress Making</td><td>7092/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7096/16</td><td>12/07/2016</td><td>PALLAVI</td><td>Stenography and Secretarial Asst. (English)</td><td>7096/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7102/16</td><td>12/07/2016</td><td>POOJA</td><td>Stenography and Secretarial Asst. (English)</td><td>7102/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7105/16</td><td>12/07/2016</td><td>BABITA</td><td>Surface Ornamentation (Embroidery)</td><td>7105/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7108/16</td><td>12/07/2016</td><td>SHEETAL</td><td>Computer Operator and Programming Assistant</td><td>7108/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7111/16</td><td>12/07/2016</td><td>HARPREET KAUR</td><td>Stenography and Secretarial Asst. (English)</td><td>7111/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7112/16</td><td>12/07/2016</td><td>SIMRAN NAGPAL</td><td>Dress Making</td><td>7112/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7114/16</td><td>12/07/2016</td><td>CHANDA DEVI</td><td>Computer Operator and Programming Assistant</td><td>7114/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7115/16</td><td>12/07/2016</td><td>PRIYANKA</td><td>Stenography and Secretarial Asst. (English)</td><td>7115/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7116/16</td><td>12/07/2016</td><td>ANSHUL</td><td>Computer Operator and Programming Assistant</td><td>7116/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7118/16</td><td>12/07/2016</td><td>Jatinder kaur</td><td>Computer Operator and Programming Assistant</td><td>7118/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7119/16</td><td>12/07/2016</td><td>SUSHMITA XALXO</td><td>Finance Executive</td><td>7119/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7120/16</td><td>12/07/2016</td><td>RAJWINDER KAUR</td><td>Sewing Technology</td><td>7120/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7125/16</td><td>12/07/2016</td><td>KIRAN</td><td>Stenography and Secretarial Asst. (English)</td><td>7125/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7129/16</td><td>12/07/2016</td><td>Nisha</td><td>Basic Cosmetology</td><td>7129/16</td><td>1st Ins</td><td>1950</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>0</td><td>50</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7132/16</td><td>12/07/2016</td><td>PRITI MISHRA</td><td>Stenography and Secretarial Asst. (English)</td><td>7132/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7134/16</td><td>12/07/2016</td><td>RADHA</td><td>Dress Making</td><td>7134/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7136/16</td><td>12/07/2016</td><td>POOJA</td><td>Computer Operator and Programming Assistant</td><td>7136/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>7138/16</td><td>12/07/2016</td><td>REEMA</td><td>Computer Operator and Programming Assistant</td><td>7138/16</td><td>1st Ins</td><td>2550</td><td>50</td><td>250</td><td>200</td><td>50</td><td>100</td><td>900</td><td>50</td><td>100</td><td>500</td><td>600</td><td>1250</td><td>50</td><td>4000</td>
+		</tr><tr>
+			<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>102750</td><td>2250</td><td>11250</td><td>8700</td><td>2250</td><td>4500</td><td>40500</td><td>2250</td><td>4500</td><td>22500</td><td>15000</td><td>32250</td><td>2250</td><td>179700</td>
+		</tr>
+	</table>
+</div>
