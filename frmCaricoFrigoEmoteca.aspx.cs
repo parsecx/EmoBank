@@ -90,7 +90,7 @@ public partial class frmCaricoFrigoEmoteca : System.Web.UI.Page
     {
         int[] a = new int[1];
         a[0] = 0;
-        ImportExport.ExportToPDF(grdData, "Carico Frigo Emoteca : Tutti", "", a, "A4", true);
+        ImportExport.ExportToPDF(grdData, "Carico Frigo Emoteca : " + ddlSeleziona.SelectedValue.ToString(), "", a, "A4", true, true);
     }
     protected void btnNuovo_Click(object sender, EventArgs e)
     {

@@ -96,7 +96,7 @@ public partial class frmAnalisiPrelievi : System.Web.UI.Page
     {
         int[] a = new int[1];
         a[0] = 0;
-        ImportExport.ExportToPDF(grdData, "Analisi Prelievi", "", a, "A4", true);
+        ImportExport.ExportToPDF(grdData, "Analisi Prelievi : " + ddlSeleziona.SelectedValue.ToString(), "", a, "A4", true);
     }
     protected void btnNuovo_Click(object sender, EventArgs e)
     {

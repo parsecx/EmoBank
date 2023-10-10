@@ -66,9 +66,9 @@ public class ImportExport : IPdfPageEvent
         }
     }
 
-    public static void ExportToPDF(GridView gv, string Title, string Filter, int[] ColToRmove, string PaperType, bool PrepareExport)
+    public static void ExportToPDF(GridView gv, string Title, string Filter, int[] ColToRmove, string PaperType, bool PrepareExport, bool isCaricoFrigoEmoteca = false)
     {
-        
+
         if (PrepareExport == true)
             PrepareForExport(gv);
         //set the cotent type to PDF
@@ -113,7 +113,11 @@ public class ImportExport : IPdfPageEvent
             cl.Attributes.Add("style", "color:#000");
             row.Cells.AddAt(0, cl);
         }
-
+        if(isCaricoFrigoEmoteca)
+        {
+            BoundField fieldDesk = new BoundField();
+            fieldDesk.HeaderText = "Description";
+        }
         gv.HeaderRow.Visible = false;
         gv.RenderControl(hw);
 
@@ -131,13 +135,15 @@ public class ImportExport : IPdfPageEvent
         // Filter And Table header
         strFilter.Append("<table style='text-align: center; line-height:12px;' cellpadding='1' cellspacing='0'><tr bgcolor='#eeeeee'><td style='font-size: 10px;  text-align:left; vertical-align: top; font-weight:bold' >" + Title + "</td><td style='font-size: 8px;  text-align:right; vertical-align: top; font-weight:bold' >Print Data: " + System.DateTime.Now.ToString("dd/MM/yyyy") + "</td></tr><tr><td style='font-size: 10px;font-weight: bold;  text-align:left; vertical-align: top;' colspan='2' bgcolor='#eeeeee'>" + Filter + " </td></tr></table>");
         strFilter.Append("<table border='1' style='font-size:9px;'>");
-        strFilter.Append("<tr bgcolor='rgb(49,49,49)' color='#fff' style='width:20px !important'>");
+        strFilter.Append("<tr bgcolor='rgb(49,49,49)' color='#fff' style='width:100px !important'>");
 
         for (int i = 0; i < gv.Columns.Count; i++)
         {
-            strFilter.Append("<th style='width:20px !important'>");
+            strFilter.Append("<th style='width:50px !important'>");
 
             strFilter.Append(gv.Columns[i].ToString());
+            string desk = isCaricoFrigoEmoteca ? "<td>Description</td>" : " ";
+            strFilter.Append(desk);
             strFilter.Append("</th>");
         }
 
@@ -145,8 +151,9 @@ public class ImportExport : IPdfPageEvent
         {
             for (int c = 0; c < gv.HeaderRow.Cells.Count; c++)
             {
-                strFilter.Append("<th style='width:20px !important'>");
+                strFilter.Append("<th style='width:50px !important'>");
                 strFilter.Append(gv.HeaderRow.Cells[c].Text.ToString());
+               
                 strFilter.Append("</th>");
             }
         }
@@ -154,11 +161,10 @@ public class ImportExport : IPdfPageEvent
         strFilter.Append("</tr>");
         strFilter.Append("</table>");
 
-        strbldr.Append("<div style='font-size:9px;margin-top:10px;'>");
-
+        strbldr.Append("<div style='font-size:9px;margin-top:10px;'>"); 
         strbldr.Append(sw.ToString());
         strbldr.Append("</div>");
-
+        string val = strbldr.ToString();
         StringReader sr = new StringReader(strbldr.ToString());
         Document document = new Document();
 
