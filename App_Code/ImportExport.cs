@@ -68,7 +68,7 @@ public class ImportExport : IPdfPageEvent
 
     public static void ExportToPDF(GridView gv, string Title, string Filter, int[] ColToRmove, string PaperType, bool PrepareExport, bool isCaricoFrigoEmoteca = false)
     {
-
+        int[] columnWidths = { 20, 30, 20, 20, 50, 60, 30, 20, 20 };
         if (PrepareExport == true)
             PrepareForExport(gv);
         //set the cotent type to PDF
@@ -113,14 +113,25 @@ public class ImportExport : IPdfPageEvent
             cl.Attributes.Add("style", "color:#000");
             row.Cells.AddAt(0, cl);
         }
+
         if(isCaricoFrigoEmoteca)
         {
             BoundField fieldDesk = new BoundField();
             fieldDesk.HeaderText = "Description";
+            gv.Columns.Insert(gv.Columns.Count, fieldDesk);
+            foreach(GridViewRow row in gv.Rows)
+            {
+                TableCell cl = new TableCell();
+                cl.Text = " ";
+                cl.Width = Unit.Pixel(20);
+                cl.Attributes.Add("style", "color:#0047298");
+                row.Cells.AddAt(row.Cells.Count, cl);               
+            }
         }
         gv.HeaderRow.Visible = false;
         gv.RenderControl(hw);
 
+        //PdfPTable table = new PdfPTable();
 
         //load the html content to the string reader
         StringBuilder strbldr = new StringBuilder();
@@ -140,10 +151,7 @@ public class ImportExport : IPdfPageEvent
         for (int i = 0; i < gv.Columns.Count; i++)
         {
             strFilter.Append("<th style='width:50px !important'>");
-
             strFilter.Append(gv.Columns[i].ToString());
-            string desk = isCaricoFrigoEmoteca ? "<td>Description</td>" : " ";
-            strFilter.Append(desk);
             strFilter.Append("</th>");
         }
 
