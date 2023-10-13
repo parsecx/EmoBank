@@ -90,7 +90,15 @@ public partial class frmCaricoFrigoEmoteca : System.Web.UI.Page
     {
         int[] a = new int[1];
         a[0] = 0;
-        ImportExport.ExportToPDF(grdData, "Carico Frigo Emoteca : " + ddlSeleziona.SelectedValue.ToString(), "", a, "A4", true, true);
+        string addedText;
+        bool hasNewColumn;
+        switch(ddlSeleziona.SelectedValue.ToString())
+        {
+            case "NUOVI" : addedText = ": Da Inserire"; hasNewColumn = false; break;
+            case "AGGIORNATI" : addedText = ": Effetuati"; hasNewColumn = true; break;
+            default: addedText = ": Tutti"; hasNewColumn = true; break;
+        }
+        ImportExport.ExportToPDF(grdData, "Carico Frigo Emoteca " + addedText, "", a, "A4", true, hasNewColumn);
     }
     protected void btnNuovo_Click(object sender, EventArgs e)
     {

@@ -31,22 +31,24 @@ public class ImportExport : IPdfPageEvent
         // TODO: Add constructor logic here
         //
     }
+
+    private StyleSheet GenerateStylesForPdfTable()
+    {
+        StyleSheet styles = new StyleSheet();
+        styles.LoadTagStyle("th", "border", "1");
+        styles.LoadTagStyle("th", "padding", "8px");
+        styles.LoadTagStyle("th", "background-color", "#f2f2f2");
+        styles.LoadTagStyle("td", "border", "1");
+        styles.LoadTagStyle("td", "padding", "8px");
+        styles.LoadTagStyle("td", "width", "50px"); 
+        return styles;
+    }
+
     public static void PrepareForExport(Control ctrl)
     {
-        //iterate through all the grid controls
         for (int i = 0; i < ctrl.Controls.Count; i++)
         {
             Control childControl = ctrl.Controls[i];
-            //if the control type is link button, remove it
-            //from the collection
-            //if (childControl.GetType() == typeof(LinkButton))
-            //{
-            //    ctrl.Controls.Remove(childControl);
-            //}
-            //if (childControl.GetType().Name.ToString() == "DataControlLinkButton")
-            //{
-            //    ctrl.Controls.Remove(childControl);
-            //}
             if (childControl.GetType() == typeof(TextBox))
             {
                 TextBox txt = (TextBox)childControl;
@@ -71,10 +73,11 @@ public class ImportExport : IPdfPageEvent
         int[] columnWidths = { 20, 30, 20, 20, 50, 60, 30, 20, 20 };
         if (PrepareExport == true)
             PrepareForExport(gv);
-        //set the cotent type to PDF
-   
-        StringWriter sw = new StringWriter();
+            //set the cotent type to PDF
+            //gv.EnableTheming = true;
+            StringWriter sw = new StringWriter();
         HtmlTextWriter hw = new HtmlTextWriter(sw);
+        
         if (ColToRmove != null)
         {
             int i = 0;
@@ -117,7 +120,7 @@ public class ImportExport : IPdfPageEvent
         if(isCaricoFrigoEmoteca)
         {
             BoundField fieldDesk = new BoundField();
-            fieldDesk.HeaderText = "Description";
+            fieldDesk.HeaderText = "Frigo Emoteca";
             gv.Columns.Insert(gv.Columns.Count, fieldDesk);
             foreach(GridViewRow row in gv.Rows)
             {
@@ -150,7 +153,7 @@ public class ImportExport : IPdfPageEvent
 
         for (int i = 0; i < gv.Columns.Count; i++)
         {
-            strFilter.Append("<th style='width:50px !important'>");
+            strFilter.Append("<th style='width:30px !important'>");
             strFilter.Append(gv.Columns[i].ToString());
             strFilter.Append("</th>");
         }
@@ -161,11 +164,9 @@ public class ImportExport : IPdfPageEvent
             {
                 strFilter.Append("<th style='width:50px !important'>");
                 strFilter.Append(gv.HeaderRow.Cells[c].Text.ToString());
-               
                 strFilter.Append("</th>");
             }
         }
-
         strFilter.Append("</tr>");
         strFilter.Append("</table>");
 
@@ -198,10 +199,11 @@ public class ImportExport : IPdfPageEvent
             image.SetAbsolutePosition(275f, 100f);
         }
         HTMLWorker htmlWorker = new HTMLWorker(document);
+        //htmlWorker.SetStyleSheet(Generate); 
         PdfWriter pdfDoc = PdfWriter.GetInstance(document, HttpContext.Current.Response.OutputStream);
         pdfDoc.PageEvent = new ImportExport();
         document.Open();
-        string s = pdfDoc.PageNumber.ToString();
+        //string s = pdfDoc.PageNumber.ToString();
         //document.Add(image);
         htmlWorker.Parse(sr);
         document.Close();
